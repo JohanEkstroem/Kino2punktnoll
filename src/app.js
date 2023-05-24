@@ -3,6 +3,7 @@ import { engine } from "express-handlebars";
 import { marked } from "marked";
 import routes from "../routes/routes.js";
 import fetch from "node-fetch";
+import movies from "../routes/movies.js";
 const app = express();
 
 app.engine(
@@ -23,7 +24,7 @@ app.use("/movies", routes.movies);
 app.use("/contact", routes.contact);
 app.use("/covidinformation", routes.covidinformation);
 app.use("/api/movies", routes.rating);
-
+app.use("/api/screenings/movies", routes.upComing)
 app.use("/api/screenings/movies", routes.oneScreening);
 app.use("/api/movies/:movieid/reviews", routes.postReviews);
 

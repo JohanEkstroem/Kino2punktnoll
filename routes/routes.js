@@ -6,6 +6,7 @@ import postReviews from "./postReviews.js";
 import rating from "./rating.js";
 import oneScreening from "./onescreening.js";
 import login from './login.js'
+import upComing from "./upComing.js";
 
 export default {
     home,
@@ -16,4 +17,5 @@ export default {
     rating,
     oneScreening,
     login,
+    upComing,
 };
