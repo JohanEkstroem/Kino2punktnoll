@@ -9,7 +9,7 @@ test('home page renders a list of movies', async () => {
 
 test('checks if a chosen movie shows right title', async () => {
   const test = await request(app)
-    .get('/movies/10')
+    .get('/movies/6')
     expect(200);
-    expect(test.text.includes('Threat')).toBeTruthy();
+    expect(test.text.includes('Gump')).toBeTruthy();
 });
