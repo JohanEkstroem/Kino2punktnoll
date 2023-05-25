@@ -1,10 +1,13 @@
 <div class="container">
     <h1>Kommande visningar</h1>
     <div class="row">
-        {{#each movies }}
+        {{#each upcomingScreening }}
             <div class="card m-2 p-0">
-                <p class="card-header">{{ this.attributes.title }}</p>
-                <a href="/movies/{{ this.id }}"><img class="card-img-bottom" src="{{{ this.attributes.image.url }}}"></a>
+                <p class="card-header">{{ this.attributes.movie.data.attributes.title }}</p>
+                <a href="/movies/{{ this.attributes.movie.data.id}}">
+                    <img class="card-img-bottom" src="{{{  this.attributes.movie.data.attributes.image.url }}}"></a>
+                <p>Datum och tid för visning: {{ this.attributes.start_time }}
+                </p> <p>Sal: {{ this.attributes.room }}</p>
             </div>
         {{/each}}
     </div>

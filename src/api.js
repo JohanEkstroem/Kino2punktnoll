@@ -41,7 +41,7 @@ export async function fetchReviews(movieId) {
   return payload.data;
 }
 export async function fetchAllScreenings() {
-  const res = await fetch(url + "/screenings");
+  const res = await fetch(url + "/screenings?populate=movie&pagination");
   return await res.json();
 }
 
